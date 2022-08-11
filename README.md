@@ -14,3 +14,14 @@ Onboarding demo project
   - pip install fastapi
   - pip install "uvicorn[standard]"
   - uvicorn app:app --reload
+
+## Sanic
+
+- Next generation Python web server/framework | Build fast. Run fast.
+- To provide a simple way to get up and running a highly performant HTTP server that is easy to build, to expand, and ultimately to scale.
+- [documentation](https://sanic.dev/en/guide/)
+- [source code](https://github.com/sanic-org/sanic)
+
+- commands:
+  - pip install sanic
+  - sanic server.app --port <port_number>
