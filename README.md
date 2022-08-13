@@ -36,3 +36,37 @@ Onboarding demo project
 
 - commands:
   - pip install marshmallow
+
+## MongoDB
+
+- [documentation](https://www.mongodb.com/docs/)
+- [installation](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-os-x/)
+- [basics tutorial](https://www.youtube.com/watch?v=ofme2o29ngU)
+- [mongodb aggregation framework](https://www.youtube.com/watch?v=A3jvoE0jGdE&list=PLWkguCWKqN9OwcbdYm4nUIXnA2IoXX0LI)
+- [mongodb GUI](https://robomongo.org/)
+- upsert --> The term upsert is a portmanteau – a combination of the words “update” and “insert.” In the context of relational databases, an upsert is a database operation that will update an existing row if a specified value already exists in a table, and insert a new row if the specified value doesn't already exist.
+
+- commands:
+  - mongosh
+  - cls
+  - exit
+  - show dbs
+  - db
+  - use <db_name>
+  - db.dropDatabase()
+  - show collections
+  - db.collection_name.insertOne({name: "Anup"})
+  - db.collection_name.insertMany([{name: "Anup"}, {name: "Ravi", age: 25}])
+  - db.collection_name.find()
+  - db.collection_name.find().limit(2)
+  - db.collection_name.find().sort({name: -1, age: 1}).limit(2)
+  - db.collection_name.find().skip(1).limit(2)
+  - db.collection_name.find({name: "Anup"})
+  - db.collection_name.findOne({name: "Anup"})
+  - db.collection_name.countDocuments({name: "Anup"})
+  - db.collection_name.find({name: "Anup"}, {name: 1, age: 1, _id: 0})
+  - db.collection_name.find({name: {$ne: "Anup"}})
+  - db.collection_name.updateOne({_id: ObjectId("6303d1a6ee47664d92572f88")}, {$set: {age: 27}})
+  - db.collection_name.updateMany({age: 26}, {$set: {age: 27}})
+  - db.collection_name.replaceOne({age: 26}, {name: "Ravi"})
+  - db.collection_name.deleteOne({age: 26})
