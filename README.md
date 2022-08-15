@@ -70,3 +70,32 @@ Onboarding demo project
   - db.collection_name.updateMany({age: 26}, {$set: {age: 27}})
   - db.collection_name.replaceOne({age: 26}, {name: "Ravi"})
   - db.collection_name.deleteOne({age: 26})
+
+## Apache Kafka
+
+- - [documentation](https://kafka.apache.org/documentation/)
+- Apache Kafka is a distributed event store and stream-processing platform. A high-throughput distributed messaging system. Tool for building real time data pipelines.
+- It helps in decoupling of data streams and systems.
+- Use cases:
+  - Messaging System
+  - Activity Tracking
+  - Gather metrics from many locations
+  - Application logs gathering
+  - Stream processing (with Kafka streams API or Spark)
+  - Decoupling of system dependencies
+  - It provides connectors to import and export bulk data from databases and other systems.
+  - Integration with Spark, Flink, Storm, Hadoop, and many more Big Data Technologies.
+- Terminologies:
+  - Producer --> An application that sends messages to Kafka.
+  - Message --> Small to medium-sized piece of data. For Kafka, message is just an array of bytes.
+  - Consumer --> An application that reads data from Kafka.
+  - Broker --> Kafka Server
+  - cluster --> A group of computers sharing workload for a common purpose. Kafka is a distributed system. So Kafka cluster has group of computers each executing one instance of Kafka broker.
+  - Topic --> A topic is a unique name for Kafka stream.
+  - Partition:
+    - Broker will store the data for a topic. This data can be huge. It may be larger than the storage capacity of a single computer. In this case, broker has a challenge in storing that data. 
+    - One of the obvious solution is to break the data into two or more parts (partitions) and distribute them into multiple computers.
+    - When we create a topic, we need to tell the number of partitions to create. And Kafka broker will create that many partitions for the topic. every partition sits on a single machine. You can not further break that partition again.
+  - offset --> A sequence id given to messages as they arrive in a partition. These numbers once assigned, they never change. They are immutable. offset starts from 0. Offsets are local to the partition.
+  - Global unique identifier of a message = Topic name + Partition number + Offset
+  - consumer group --> A group of consumers acting as a single logical unit.
