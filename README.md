@@ -73,8 +73,14 @@ Onboarding demo project
 
 ## Apache Kafka
 
-- - [documentation](https://kafka.apache.org/documentation/)
-- Apache Kafka is a distributed event store and stream-processing platform. A high-throughput distributed messaging system. Tool for building real time data pipelines.
+- [documentation](https://kafka.apache.org/documentation/)
+- [configuring Kafka for access across networks](https://www.confluent.io/blog/kafka-client-cannot-connect-to-broker-on-aws-on-docker-etc/)
+- [kafdrop - kafka web ui](https://github.com/obsidiandynamics/kafdrop)
+- [kafka-shell](https://betterdatascience.com/master-the-kafka-shell-in-5-minutes-topics-producers-and-consumers-explained/)
+- [kafka-python](https://timber.io/blog/hello-world-in-kafka-using-python/)
+- [kafka-fastapi](https://www.youtube.com/watch?v=l5NOe3jTEso)
+- [kafka-sanic](https://github.com/naruvimama/falcon)
+- Apache Kafka is a distributed event store and stream-processing platform. A high-throughput distributed messaging system. Tool for building real time data pipelines. streaming/queueing/messaging system.
 - It helps in decoupling of data streams and systems.
 - Use cases:
   - Messaging System
@@ -91,7 +97,7 @@ Onboarding demo project
   - Consumer --> An application that reads data from Kafka.
   - Broker --> Kafka Server
   - cluster --> A group of computers sharing workload for a common purpose. Kafka is a distributed system. So Kafka cluster has group of computers each executing one instance of Kafka broker.
-  - Topic --> A topic is a unique name for Kafka stream.
+  - Topic --> A topic is a unique name for Kafka stream. Kafka stores a stream of records in categories called topics. Each record consists of a key, value and a timestamp.
   - Partition:
     - Broker will store the data for a topic. This data can be huge. It may be larger than the storage capacity of a single computer. In this case, broker has a challenge in storing that data. 
     - One of the obvious solution is to break the data into two or more parts (partitions) and distribute them into multiple computers.
@@ -99,3 +105,6 @@ Onboarding demo project
   - offset --> A sequence id given to messages as they arrive in a partition. These numbers once assigned, they never change. They are immutable. offset starts from 0. Offsets are local to the partition.
   - Global unique identifier of a message = Topic name + Partition number + Offset
   - consumer group --> A group of consumers acting as a single logical unit.
+- References:
+  - [ntegrating Apache Kafka With Python Asyncio Web Applications](https://www.confluent.io/blog/kafka-python-asyncio-integration/)
+  - [confluent kafka in docker shell](https://developer.confluent.io/quickstart/kafka-docker/)
