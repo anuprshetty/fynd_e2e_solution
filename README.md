@@ -106,5 +106,5 @@ Onboarding demo project
   - Global unique identifier of a message = Topic name + Partition number + Offset
   - consumer group --> A group of consumers acting as a single logical unit.
 - References:
-  - [ntegrating Apache Kafka With Python Asyncio Web Applications](https://www.confluent.io/blog/kafka-python-asyncio-integration/)
+  - [integrating Apache Kafka With Python Asyncio Web Applications](https://www.confluent.io/blog/kafka-python-asyncio-integration/)
   - [confluent kafka in docker shell](https://developer.confluent.io/quickstart/kafka-docker/)
