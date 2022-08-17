@@ -5,11 +5,11 @@ from typing import Union
 app = FastAPI()
 
 
-@app.get('/')
+@app.get("/")
 async def home():
-	return {"Hello": "World!"}
+    return {"Hello": "World!"}
 
 
 @app.get("/items/{item_id}")
 async def read_item(item_id: int, q: Union[str, None] = None):
-	return {"item_id": item_id, "q": q}
+    return {"item_id": item_id, "q": q}

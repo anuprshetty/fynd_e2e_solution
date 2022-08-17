@@ -6,9 +6,9 @@ import asyncio
 app = FastAPI()
 
 
-@app.get('/')
+@app.get("/")
 async def Home():
-	return "Hello World!"
+    return "Hello World!"
 
 
 app.include_router(router.route)

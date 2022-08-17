@@ -7,4 +7,4 @@ app = Sanic("HelloWorldApp")
 
 @app.get("/")
 async def home(request):
-	return response.text("Hello, World!")
+    return response.text("Hello, World!")

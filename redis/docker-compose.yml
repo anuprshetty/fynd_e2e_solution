@@ -1,11 +1,11 @@
-version: '3' # Version of docker-compose
+version: "3" # Version of docker-compose
 
 services:
   redis-server:
-    image: 'redis'
+    image: "redis"
     container_name: redis-server-container
     restart: on-failure
-#    expose:
-#      - 6379
+    # expose:
+    #   - 6379
     ports:
       - "6379:6379"

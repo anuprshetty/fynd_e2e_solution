@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 
 services:
   solr:
@@ -7,7 +7,7 @@ services:
     container_name: solr-container
     restart: on-failure
     ports:
-     - "8983:8983"
+      - "8983:8983"
     volumes:
       - ./configs:/var/solr/data
     command:

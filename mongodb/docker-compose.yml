@@ -1,8 +1,8 @@
-version: '3.8' # Version of docker-compose
+version: "3.8" # Version of docker-compose
 
 services:
   mongodb-server:
-    image : 'mongo'
+    image: "mongo"
     container_name: mongodb-server-container
     restart: on-failure
     environment:

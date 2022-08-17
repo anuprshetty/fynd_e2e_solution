@@ -1,13 +1,14 @@
-# fynd_e2e_solution
-Onboarding demo project
+# Fynd End To End Solution
+
+Fynd onboarding demo project.
 
 ## FastAPI
 
 - [documentation](https://fastapi.tiangolo.com)
 - [source code](https://github.com/tiangolo/fastapi)
 - FastAPI stands on the shoulders of giants:
-    - [Starlette for the web parts](https://www.starlette.io/) - Starlette is a lightweight ASGI framework/toolkit, which is ideal for building async web services in Python.
-    - [Pydantic for the data parts](https://pydantic-docs.helpmanual.io/) - pydantic enforces type hints at runtime, and provides user-friendly errors when data is invalid.
+  - [Starlette for the web parts](https://www.starlette.io/) - Starlette is a lightweight ASGI framework/toolkit, which is ideal for building async web services in Python.
+  - [Pydantic for the data parts](https://pydantic-docs.helpmanual.io/) - pydantic enforces type hints at runtime, and provides user-friendly errors when data is invalid.
 - uvicorn --> ASGI server (Asynchronous Server Gateway Interface)
 
 - commands:
@@ -64,9 +65,9 @@ Onboarding demo project
   - db.collection_name.find({name: "Anup"})
   - db.collection_name.findOne({name: "Anup"})
   - db.collection_name.countDocuments({name: "Anup"})
-  - db.collection_name.find({name: "Anup"}, {name: 1, age: 1, _id: 0})
+  - db.collection_name.find({name: "Anup"}, {name: 1, age: 1, \_id: 0})
   - db.collection_name.find({name: {$ne: "Anup"}})
-  - db.collection_name.updateOne({_id: ObjectId("6303d1a6ee47664d92572f88")}, {$set: {age: 27}})
+  - db.collection_name.updateOne({\_id: ObjectId("6303d1a6ee47664d92572f88")}, {$set: {age: 27}})
   - db.collection_name.updateMany({age: 26}, {$set: {age: 27}})
   - db.collection_name.replaceOne({age: 26}, {name: "Ravi"})
   - db.collection_name.deleteOne({age: 26})
@@ -99,7 +100,7 @@ Onboarding demo project
   - cluster --> A group of computers sharing workload for a common purpose. Kafka is a distributed system. So Kafka cluster has group of computers each executing one instance of Kafka broker.
   - Topic --> A topic is a unique name for Kafka stream. Kafka stores a stream of records in categories called topics. Each record consists of a key, value and a timestamp.
   - Partition:
-    - Broker will store the data for a topic. This data can be huge. It may be larger than the storage capacity of a single computer. In this case, broker has a challenge in storing that data. 
+    - Broker will store the data for a topic. This data can be huge. It may be larger than the storage capacity of a single computer. In this case, broker has a challenge in storing that data.
     - One of the obvious solution is to break the data into two or more parts (partitions) and distribute them into multiple computers.
     - When we create a topic, we need to tell the number of partitions to create. And Kafka broker will create that many partitions for the topic. every partition sits on a single machine. You can not further break that partition again.
   - offset --> A sequence id given to messages as they arrive in a partition. These numbers once assigned, they never change. They are immutable. offset starts from 0. Offsets are local to the partition.

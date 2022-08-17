@@ -1,5 +1,5 @@
 ---
-version: '2'
+version: "2"
 services:
   zookeeper:
     image: confluentinc/cp-zookeeper:7.2.1
@@ -19,15 +19,15 @@ services:
     container_name: broker-container
     restart: on-failure
     ports:
-    # To learn about configuring Kafka for access across networks see
-    # https://www.confluent.io/blog/kafka-client-cannot-connect-to-broker-on-aws-on-docker-etc/
+      # To learn about configuring Kafka for access across networks see
+      # https://www.confluent.io/blog/kafka-client-cannot-connect-to-broker-on-aws-on-docker-etc/
       - "9092:9092"
       - "9101:9101"
     depends_on:
       - zookeeper
     environment:
       KAFKA_BROKER_ID: 1
-      KAFKA_ZOOKEEPER_CONNECT: 'zookeeper:32181'
+      KAFKA_ZOOKEEPER_CONNECT: "zookeeper:32181"
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
       KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://broker:29092,PLAINTEXT_HOST://localhost:9092
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
@@ -40,8 +40,8 @@ services:
       KAFKA_JMX_HOSTNAME: localhost
       CONFLUENT_METRICS_REPORTER_BOOTSTRAP_SERVERS: broker:29092
       CONFLUENT_METRICS_REPORTER_TOPIC_REPLICAS: 1
-      CONFLUENT_METRICS_ENABLE: 'true'
-      CONFLUENT_SUPPORT_CUSTOMER_ID: 'anonymous'
+      CONFLUENT_METRICS_ENABLE: "true"
+      CONFLUENT_SUPPORT_CUSTOMER_ID: "anonymous"
 
   kafdrop-web-ui:
     image: obsidiandynamics/kafdrop
