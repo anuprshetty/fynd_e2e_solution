@@ -1,0 +1,6 @@
+<currencyConfig version="1.0">
+  <rates>
+    <!-- Updated from http://www.exchangerate.com/ at 2011-09-27 -->
+    <rate from="USD" to="INR" rate="73.175" comment="USD to INR" />
+  </rates>
+</currencyConfig>
