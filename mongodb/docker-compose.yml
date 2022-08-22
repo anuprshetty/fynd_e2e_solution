@@ -1,0 +1,14 @@
+version: '3.8' # Version of docker-compose
+
+services:
+  mongodb-server:
+    image : 'mongo'
+    container_name: mongodb-server-container
+    restart: on-failure
+    environment:
+      - PUID=1000
+      - PGID=1000
+    volumes:
+      - /Users/anupshetty/mongodb/database:/data/db
+    ports:
+      - 27017:27017
