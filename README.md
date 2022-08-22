@@ -25,3 +25,14 @@ Onboarding demo project
 - commands:
   - pip install sanic
   - sanic server.app --port <port_number>
+
+## marshmallow
+
+- A Python Object Serialization and Deserialization Library.
+- marshmallow is an ORM/ODM/framework-agnostic library for converting complex datatypes, such as objects, to and from native Python datatypes.
+- An ORM maps between an Object Model and a Relational Database. An ODM maps between an Object Model and a Document Database. MySQL is not an ORM, it's a Relational Database, more specifically, a SQL Database. MongoDB is not an ODM, it's a Document Database.
+- xyz is 'Framework agnostic' simply means that xyz does not depend on any framework. It is a great and much required idea that focuses on building libraries/components which are not dependent on any specific framework for their implementation, rather to develop a generic stuff to cater everyone.
+- [documentation](https://marshmallow.readthedocs.io/en/stable/)
+
+- commands:
+  - pip install marshmallow
