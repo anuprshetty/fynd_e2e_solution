@@ -1,0 +1,655 @@
+# The ASF licenses this file to You under the Apache License, Version 2.0
+# (the "License"); you may not use this file except in compliance with
+# the License.  You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#-----------------------------------------------------------------------
+#some test synonym mappings unlikely to appear in real input text
+aaafoo => aaabar
+bbbfoo => bbbfoo bbbbar
+cccfoo => cccbar cccbaz
+fooaaa,baraaa,bazaaa
+# Some synonym groups specific to this example
+GB,gib,gigabyte,gigabytes
+MB,mib,megabyte,megabytes
+Television, Televisions, TV, TVs
+#notice we use "gib" instead of "GiB" so any WordDelimiterFilter coming
+#after us won't split it into two words.
+# Synonym mappings can be used for spelling correction too
+
+pixima => pixma
+tees => t
+tee => t
+tshirts => t
+platform => wedges
+pencil => stilettos
+modi => nehru
+sari => sarees
+tie=>ties
+
+
+t,t-shirt,tshirt,tshirts,t-shirts,tees
+back, packs, backpacks
+hand, bags, handbag
+track, trackpants
+hair, bands, hairband
+dress shoes, shoes
+sneaker, sneaker shoes
+salman, khan, being human
+dress,dress shirts
+shirts,shart,sharts
+power bank, powerbank
+smartphone, smartphones, mobile, mobilephone, mobile phone, smart phone, phone
+iphone, i phone
+tv, t.v., t.v, television, televisions
+refrigerator, fridge
+
+# L1 Categories
+footwear,foot
+clothing, clothes,garment,cloth,outfit,costume,apparel
+nightwear, innerwear, loungewear, undergarments, night cloth, sleeping suit, sleepwear, sleeping clothes,night wear,sleep wear
+accessories,additions
+ethnic wear, indian dress, indian clothes, ethnic clothes, ethnic outfits, ethnic clothes, ethnic outfits
+jewellery,jewelry,ornament,adornment,metal jewelry,brass jewelry
+lingerie,inner wear women,ladies inner wear,women's undergarments,bra and panty intimate,intimate things
+
+# L2 Categories
+bags & wallets,bags,carry bag,baggage,luggage, briefcase
+#belts, ties & add-ons,add ons,addons,men's accessroies
+#caps,hats & mufflers,mufflers,headgear,head accessories,headwear
+socks,sock,snocks
+sunglasses,frames,eyewear,eyegear,shades,glasses
+watches,watch,wristwatch,timepiece,pocket watch,wach
+activewear,sportswear,sports wear,sports collection,sports clothes,sports
+beachwear,swimwear,swimwear,beachwear,beach clothes,swimming clothes,swim costume
+casual trousers,casual pants,casual bottoms, lower
+formal trousers,formal pants,formal bottoms
+jackets,coats,outterwear,overcoats
+polo,t-shirts,topwear men,golf t-shirt,golf tee,casual topwear,casual t-shirts,gents topwear,topwear
+suits & blazers,formal coats,formal outterwear,shrugs
+winter wear,winter clothes
+ethnic bottoms,dhotis,churidhar
+kurtas, jackets & ethnic sets,ethnic tops,ethnic topwear,topwear
+boots,gumboots,high boots,calf boots,ankle boots,boot,overshoe
+casual shoes,shoes,casual footwear
+flip flops,slippers,chappals
+formal shoes,formal footwear
+#sneakers,white sneakers,white shoes,sneaky sandals,snekars,snekers,sneaker shoes
+sports shoes,canvas shoes,sports footwear
+chains & pendants, jewellery men
+earrings,earpiece
+tops,topwear women,female topwear,ladies topwear
+dress material,unstitched dress pieces,dress pieces,semi stitched dress piece,unstitched dress material,semi stitched dress material
+ethnic Jackets,ethnic coats,ethnic
+ballerinas,ballerina,bellies
+heels, high heels
+bras, bra
+
+
+# L3 Category
+Backpacks,sacks,backsacks,bagpacks,bagpack,college bags
+Briefcases,officecase,briefcase
+Duffles,dufle,duflles,gym bag,duffle gym
+Laptop Bags,laptop case,laptop cover,laptop bag,lappy cover,lappy bag,laptop backpack
+Messenger Bags,side bags,messengers
+Pouches,poch,pouch
+Satchels
+Suitcases,luggage bag,luggage case,luggage carrier
+Wallets,Purse,leather wallet,square wallet,walet
+Belts,waist belt,belt
+Brooches,brooch,brooch piece
+Cufflinks,cufflings,cuff ling,cuff links
+Pocket Squares,men squares,formal squares
+Tie-pins,tiepins,pins
+Ties,necktie,tie,tye,ties
+Caps,cap,topi
+Gloves,glove,glov
+Hats,hat
+Mufflers
+Shawls,shawl
+Stoles,stole
+Socks
+Accessories,accesories,accesory
+Aviators,aviator
+Browline Sunglasses
+Cateye Sunglasses
+Frames,chashma,glasses
+Oval Sunglasses
+Oversized Sunglasses
+Rectangle Sunglasses
+Round Sunglasses
+Sports Sunglasses
+Square Sunglasses
+Wayfarers
+Analog Watches,analog,dial watch
+Chronograph Watches,chronograph
+Digital Watches,digital
+Activewear Jackets,sports jacket,running jacket
+Joggers
+Shorts,running shorts,half shorts, half pants,short
+Trackpants
+Tracksuits
+Boardshorts,beach shorts,surf shorts
+Briefs
+Rashguard
+Trunks
+Cargos
+Chinos,casual pants,cotton pants,linen pants
+Corduroys,cordroys,cord roy
+Formal Trousers,office pants,formal wear,workwear
+Bomber Jackets
+Denim Jackets
+Front Open Jackets
+Gilet
+Leather Jackets
+Windcheater
+Jeans,denims,denim
+Polos,polo t-shirt,polo tee
+Casual Shirts,casual shirt,causal shirts
+Formal Shirts,office shirts,formalwear,dress shirts,party shirts,party night shirts
+3/4ths,3/4 th
+Blazers
+Suits
+Waistcoats,waist coat,waste coat
+Cardigans
+Hoodies
+Sweaters
+Sweatshirts
+Churidars
+Dhotis,dhoti pants
+Bandhgalas
+Ethnic Jackets,indian jackets,kotis
+Jodhpuris
+Kurta Sets
+Kurtas,kurta long,long kurtas
+Pathanis
+Sherwanis
+Boots,booties
+Boat Shoes
+Casual Lace-ups
+Casual Slip-ons
+Loafers
+Moccasins
+Flip Flops,flipflop,flip-flop,flip-flops, flip flop,slippers,slipers
+Slippers
+Brogues
+Derby Shoes
+Formal Slip-ons, slip on boots
+Lace-ups
+Monk-strap Shoes
+Oxfords
+Clogs,mules
+Ethnic Sandals
+Floaters
+Sandals,sandel
+Sneakers
+Football Shoes,spikes
+Hiking Shoes,hiking
+Indoor Sports Shoes
+Outdoor Sports Shoes
+Running Shoes
+Trainers
+Sandos,vest
+Tanks
+Thermal Bottoms
+Thermal Set
+Thermal Tops
+Vests,sandos,ganji
+Nightsuits
+Pyjamas
+boxer,boxer shorts
+Chains,neck chain,locket
+Clip-ons
+Hoops
+Studs
+Bracelets
+Rings,finger ring
+Others
+Clutches,clutch bag,party clutch
+Handbags,hand bag,purse,handbag
+Hobos,hobbos,jhola
+Sling Bags
+Totes
+Hair Clips,tic tac clip
+Hairbands,hair bands
+Maang Tikka
+Scarves
+Stockings
+Sports Bras
+Tights
+Activewear Tops
+Yoga Pants
+Bikinis,bikini ,bikini set
+Kaftan,kimono
+Sarong
+Swimsuit
+Capris,3/4ths
+Culottes,culotes,cullotes,coluttes
+Harem,harim
+Leggings
+Palazzos,plazzo
+Asymmetric Dress
+Bodycon Dress,bodycon,body con
+Gowns,full length dress
+Jumpsuits,playsuit,jump suit,romper
+Maxi Dress
+Off Shoulder Dress
+Peplum Dress
+Sheath Dress
+Shift Dress
+Shirt Dress
+Skater Dress,flared dress
+Slip Dress
+Sweater Dress
+Tiered Dress
+Tube Dress
+Jeggings
+Camisole,cami,slip
+Corsets
+Shapewear,thigh shaper,tummy tucker
+Shrugs
+Skirts
+Blouson
+Bodysuit, bodysuit top
+Crop Top, half top
+Kaftans
+Maxi Top, long top
+Off Shoulder Top
+Peplum Top
+Strappy Top,spaghetti top
+Tank Top
+Tube Top
+Tunics
+Lehengas,lehangas,western lehenga,lehnga,lehnega set,lenga choli,lehenga choli,lehnga
+Suit Sets,suitsets,kurta salwar,salwar kurta,chudidar kurta,anarkali set,patiala kurta,patiala salwar,
+Abayas
+Hijabs
+Anarkalis,floor length anarkali,anarkali,flared kurta
+Kurtis
+Patialas
+Salwars
+Blouses
+Sarees
+Dupattas,chunni,chunari,odani,dupatta,dupata
+Churidar & Kurta
+"Churidar, Kurta & Dupatta"
+Kurta & Dupatta
+Palazzo & Kurta
+"Palazzo, Kurta & Dupatta"
+Patiala & Kurta
+"Patiala, Kurta & Dupatta"
+Salwar & Kurta
+"Salwar, Kurta & Dupatta"
+Ballerinas,ballets,bellies
+D'orsay,dorsay,dorsy
+Espadrilles,espadrils,espadriles
+Flat Sandals,tie ups
+Flat Slip-ons,sliders,slides
+Gladiators,gladiaters
+Pointed Toe
+Block Heels
+Cone Heels
+Heel Sandals
+Kitten Heels
+Louis Heels
+Stilettos
+Wedges
+Anklets,payal ,anklet
+Toe Rings
+Bangles,chudi,bangal,kangan
+Kadas,kada
+Dangle & Drop Earrings
+Earcuffs,ear cuff,jewellery ear
+Jhumkis
+Jewellery Sets
+Necklaces,neckpiece
+Pendants
+Bands
+Hand Harness
+Nose Rings,nathani
+Backless Bra
+Basic Bra
+Bikini Bra
+Bralette
+Maternity Bra
+Moulded Bra
+Push-up Bra
+Sports Bra
+Stick-on Bra
+Strapless Bra
+T-Shirt Bra
+Lingerie Accessories
+Lingerie Set
+Basic Panties
+Bikini Panties
+Boyshorts
+Hipster Panties
+Seamless Panties
+Thongs
+Babydolls
+Night Dresses
+Night Gowns
+Night Robes
+Nightwear Sets
+Sleep Shirts
+Sleep Shorts
+Shoes,shus,shoo,shoe,shoos,shous
+
+# Brands
+Aria,Liya,Area liya,arialia,aria,lia
+pepe jeans,pepe
+dc shoes,dc
+van heusen,van heusen,van husen,vanhusen,van huesen,vanhuesen
+metro,metro,mtro
+louis philippe,louis philippe,louis philipe,luois philiph,luis philippe,louie phillip
+people,people,peepal
+mochi,mochi,muchi
+nike,nike,nik,neek,nikee
+peter england,peter england,petter england,peeter englnd,petre england,petre ingland
+globus,globus
+pepe jeans,pepe jeans,pepe,peppe,pep jens,pepe jeans
+biba,biba
+puma,puma
+being human,being human,being hanuman,bhai ka brand
+cult fiction,cult fiction,cult fictoin,cut fiction
+ayesha,ayesha,aayesha,aisha,aaisha,ayeshaa
+wrangler,wrangler,warngler,wranglr
+lee,lee
+love from india,love from india,luv from india,luv frm ind,luv frm ind,luv from ind,love frm india
+stylista,stylista,stylist,stylistaa
+add ons,add ons,addon,addons,adons
+planet superheroes,planet superheroes,planet superhero,plant superheros,planet superheros
+lavie,lavie,lavi,lavei,la vie
+taraash,taraash,tarash,taarash
+red tape,red tape,redtape
+wildcraft,wildcraft,wild craft
+sonata,sonata
+v.,v.,v dot
+john players,john players,john player,jon players,jon player
+blackberrys,blackberrys,blackberry,black berrys,blackberry's,blackberries
+label,label,lable
+w,w,w
+chumbak,chumbak
+jockey,jockey,jocks
+fastrack,fastrack,fast track,fasttrack,fast rack
+soch,soch
+rosso brunello,rosso brunello,roso brunelo,rosso brunelo
+sia,sia,siya
+global desi,global desi,globaldesi,gd
+cotton world,cotton world,cottonworld,cotonworld,coton world
+woodland,woodland,wood land
+soie,soie,soei,sua
+wills lifestyle,wills lifestyle,wils lifestlyle
+park avenue,park avenue,park aveneu
+basics life,basics life,basic life
+adamis,adamis,ada mis
+indian terrain,indian terrain,indian terain,indian teraan
+tantra,tantra
+avirate,avirate
+amante,amante,amantã©
+integriti,integriti,integrity,intigrety
+happy socks,happy socks
+pipa bella,pipa bella,pippa bella
+madame,madame,madam
+mustard,mustard
+action,action,action shoes
+catwalk,catwalk,cat walk
+esbeda,esbeda
+easies,easies,eazies
+jashn,jashn
+london bee,london bee
+ira soleil,ira soleil,ira soliel
+ten on ten,ten on ten,10 on 10
+raymond,raymond,raymonds
+bombay electric,bombay electric
+cantabil,cantabil,cantbil
+killer,killer
+lawman pg3,lawman pg3,pg3,lawmen pg3
+luc fashion,luc fashion
+satya paul,satya paul,satyapaul
+happily unmarried,happily unmarried
+libas,libas
+parx,parx,parks
+color plus,color plus,colour plus,colorplus,colourplus
+goddess women,goddess
+tycoon,tycoon,tycon
+crocs,crocs
+baggit,baggit
+the label life,the label life,label life,labellife
+cygnet,cygnet,cynget
+desi belle,desi belle,desibelle,desi bella
+eight.eight,eight.eight,8 8,eight eight
+the cotton company,the cotton company,cotton company
+loco en cabeza,loco en cabeza,loco encabaza
+pluss,pluss,plus
+eske,eske,sk,es ke
+restless,restless,rest less
+the bro code,the bro code,brocode,bro
+gildermen,gildermen,gilder man,dilder men,gilder men,gilder
+lemon trunk,lemon trunk,lemontrunk,lemon
+dxi,dxi
+lord's,lord's,lords
+enamor,enamor,ena mor,enmor
+fida,fida
+toniq,toniq,tonic,toni q
+holii,holii,holi
+mineral,mineral,minral
+miss pink,miss pink,miss
+shaze,shaze
+tribal zone,tribal zone
+philigree,philigree,philgri,philigri,filigri,philigre
+vans,vans, van
+chica,chica,lawman chica
+gossip,gossip
+kraus,kraus,kruas,craus
+levis,levis,levi,levi's
+cotton culture,cotton culture
+ciroco,ciroco
+play clan,play clan,playclan
+seven east,seven east,seveneast
+steve madden,steve madden,steve maden,maiden
+the tie hub,the tie hub,tie hub
+titan eye+,titan eye+,titan eye
+abhivani,abhivani,abhivaani
+fighting fame,fighting fame
+intoto,intoto,in to to,in toto,in22
+raindrops,raindrops,raindrop,rain drops
+xylys,xylys,xyls
+ld jeans co.,ld jeans co.,ld active
+siyaa,siyaa
+chimp,chimp
+before after,before after
+hidesign,hidesign,hi design,high design
+karsci,karsci,karsic
+lesley,lesley,lesly
+shree,sri,shri,sree
+woodons,woodons,wood ons,woodon,wood on
+sparx,sparx,sparks
+the stiff collar,the stiff collar,stiff collar
+ld active,ld active,ld jeans
+chemistry,chemistry
+kazo,kazo,kezo
+109f,109f,109f,109 f,109 farenheit,109ff
+aaboli,aaboli,aaboli,aboli,aaboooli,aboli
+abeeza,abeeza,abeeza,abiza,abeeza,abizza
+abhishti,abhishti,abhishti,abhishti,abhish,abishti,abhishtee
+ahalyaa,ahalyaa,aahalyaa,ahalyaa,ahilya,aheelya
+ama bella,ama bella,ama bella,amabella,anabella,ama bell,ama bella
+aristocrat,aristocrat,aristocrat,areestocrat,aristrocrat
+arsya jewellery,arsya jewellery,arsya jewellery,arsyaa jewelry,arya jewelery,aarsya jewellery
+asics,asics,asics,asic,aseecs,asics shoes,asics
+aurelia,aurelia,aurellia,aureallia,aurelia,aureliia
+baali,baali,bali,baali,baalee
+bacca bucci,bacca bucci,bacca bucchi,bcacca buchhi,baccha buchhi,bacca bucci
+bata,bata,bata,bata shoes,beta
+bcbgeneration,bcbgeneration,bcbgeneration,bcb generation,bcbgenration
+benour,benour,binour,benur,benuor,binour
+blink,blink,blnk,blink,bleenk
+blue melon,blue melon,bluemelon,blu melon,bluee melon,blue melon
+blue sequin,blue sequin,blue sequins,bluee sequins,blue sequn,blue sequins,blue sequins
+brass tracks,brass tracks,brass tracks,brasstracks,bras track,brass trackss
+brooks brothers,brooks brothers,brooks brothers,brook brothers,brooks brother,brooks brother,brook brothers,bruk brother,bruk broother
+butterflies,butterflies,butterfly,butterflies,butterfly
+bvlgari,bvlgari,bulgari,bulgari,blvgaree,bulgary
+c9,c9,c9,c 9,c nine,see9
+callaway,callaway,callaway,callway,calllway,calway,callway
+caprese,caprese,caprese,caprys
+casio,casio,casio
+catwalk,catwalk,catwalk,catwak,cat walk
+celio,celio,celio,calio,clio,cleo,celeo
+chica,chica,chic,chiac,cica,chicaa
+chiggy wiggy,chiggy wiggy,chiggy wiggy,chigy wigy,chiggy wiggy,chigy wigy
+chumbak,chumbak,chumbak,chumbk,chmbk,chum bak,chum bak
+clovia,clovia,clobia,clovia,clovea,clovea
+cotton world,cotton world,cotton world,cotton world,cooton world,cottom world,cotton world
+covo,cuvo,covu,cvo,cevo,cuvu,cobo
+cross,cross,criss,croos,cross
+cult fiction,cult fiction,cult fiction,clut fiction,cult fiction,cultfiction,cultficton
+cygnet,cygnet,cygny,cygnet,cygnt,cygnet
+da vinchi,da vinchi,davinchi,da vinci,davinchi
+dc shoes,dc shoes,dcshoes,dc shoe,dc shoes,ds shoes,d shoes
+dearfoams,dearforams,dear foam,dearfoams,dearforam,dearfoams,dearfoam
+deezeno,deezeno,deezeno,dizino,dezino,dizeeno
+desi belle,desi belle,desi bell,desi bella,desi belly,desi bell,desi bella,desibell,
+devotie,devotie,devoty,devotei,devotie
+dolce & gabbana,dolce & gabbana,dolchegabana,dolce gabana,dolce & gabanna,dolce & gabbana
+dune london,dune london,dune lundon,done london,dunelondon,dune london
+easies,easies,easies,easyes,easis
+eclat,eclat,eclat,eclar,eclit,eclaier,eclar
+embauche,embauche,embauche,embauch,em bache,embauch
+ennoble,ennoble,inoble,enoble,ennoble,enoble,enbl,enoble,enobel
+esbeda,esbeda,esbeda,esbed,esbeda bags,esbeda bags
+fab deanta,fab deanta,fav deanta,fabdena,fabdeanta,fab deants,fab deanta
+fashion eva,fashion eva,fashioneva,fashion eva,fashn eva,fashion evi,fashionev,fashioneve,
+fayon,fayon,fayo,fayon,fayun,fay on
+fgali,fgali,fgali,f gali,fgali,f gaali,f galee,fgale,
+fida,fida,feeda,fida
+firanji,firanji,firangi,firanji
+fireflies,fireflies,fireflies,fire fly,firefly,fireflies
+fossil,fossil,fossil,fossel,fossil watches
+fusion beats,fusion beats,fusionbeats,fusion beats,fusion beat,fusionbeat,fuson beats,fusion beets,
+gas,gas,gas,gaas,gus,gas
+get wrapped,get wrapped,getwrapped,get wrapped,getwrappd,get rapd,getraped,getrapped,
+gildermen,gildermen,gilder man,glidermen,gliderman,gildermen,gilder man
+gkb,gkb,gkb,gk b,g k b
+global desi,global desi,globaldesi,global desi,global desi,globl desi,gobal besu,global besi,
+globus,globus,globus,glob,glubos,globus
+gnist,gnist,gnist,gneest,g nist,gniest
+go colors,go colors,gocolurs,go colour,go colours,go colur,gocolur,gocolours,goculours
+hamster,hamster,hamster,hamstre,hamtres
+happy,happy socks,happy socks,happysock,happy socks,happie sock,happie socks, happi sock
+harrisons bags,harrisons bags,harrison bag,harrison bag,harysonbag,harrysonbags
+hepburnette,hepburnette,hepbrunete,hepburnette,hep burnet,hep burneette
+honey & b,honey & b,honeyandb,honey & bee,honeyand bee
+hooboo,hooboo,hobu,hooboo,boohoo,buhu,hoobu,huboo,
+hook & eye,hook & eye,hook&ey,hukandey,huk and eye,hoon & eye
+hunkemoller,hunkemoller,hunkimoller,hunkeemoller,hunkeemoller,hunkimoller,hunkemoller
+hush puppies,hush puppies,hushpuppy,hush puppies,hushpupies,hus puppy,hush puppies
+inc.5,inc.5,inc 5,inc5
+integriti,integriti,integreeti,integriti
+j. fontini,j. fontini,jfontini,j fonitini,jfontin
+jaipur kurti,jaipur kurti,jaipurkurti,jaipur kurti,jaipur kurti
+jashn,jashn,jashn,jash n,jashne
+john pride,john pride,johnpride,johnpride,jogn pride
+joker & witch,joker & witch,jokerandwitch,joker and witch,joker & witch
+juicy couture,juicy couture,juicycuture,juicy couture,juicy coture,juicycoutuer
+justanned,justanned,just tan,just tand,just taneed
+kaaryah,kaaryah,karyah,karyaah,kaaryah
+kenneth cole,kenneth cole,keneth cole,kennethcloe,kenneth cole
+killer,killer,killer,keeler,keelir
+lawman pg3,lawman pg3,lawmanpg3,lamwn,lawman,lawmen,lawmn
+lee,lee,li,lee,lee jeans,le
+lemon trunk,lemon trunk,lemontrunk,lemon trunk,lomon trunk
+lino perros,lino perros,leeno piros,leeno perros,lino perros
+loco en cabeza,loco en cabeza,locoencabeza,locoencabeza
+london bee,london bee,londonbee,londun bee
+london bridge,london bridge,londonbridge,london breedge,londonbridge
+lotto,lotto,loto,lotto,loto
+manyavar,manyavar,maanyavaar,manyvar,manyaavar
+maui jim,maui jim,mauijim,mau jim,mauee jeem
+maybell,maybell,maybell,may bell
+meriggiare,meriggiare,mereegaire,meriggre
+michael kors,michael kors,michelkor,michalkors,michael kors
+miss chase,miss chase,misschase,misss chaaase,mis chase
+mochi,mochi,mochi,moochee,mochee
+mode vetements,mode vetements,mode vetement,mod vetmant,mode vent
+msmb,msmb,msmb,msbm,mbsm
+noble faith,noble faith,noblefaith,nobel faith,nobel faith
+northern lights,northern lights,northernlights,northerns lights,nothernlight
+nuteez,nuteez,nooteeez,nutiz,nutees
+oakley,oakley,oakly,oakley
+ozel fashions,ozel fashions,ozelfashion,ozel fashions ozelfashion
+paprika,paprika,papreeka,parik,parikaa
+pavechas,pavechas,pavecha,pavicha,paveecha,paveechaas
+people,people,people,peop,people
+pepe jeans,pepe jeans,pepejeans,pepe jans,pipe jeans
+pera doce,pera doce,peradoce,pera doce
+peter england,peter england,peter england,peterengalnd,peterengland
+philigree,philigree,philigree,pheeligre,philigree
+phive rivers,phive rivers,phiverivers,phive rivers,phiverivers
+pink hippo,pink hippo,pinkhippo,pink hippoo
+pipa bella,pipa bella,pipabela,pipa bella,peepabela
+play clan,play clan,playclan,playclen
+polaroid,polaroid,polaroid,ploraid
+police,police,police,police,ploci
+power,power,power,powr
+prada,prada,prada,prda
+pretty secrets,pretty secrets,prettysecrets,pretty secret,pritysecret
+q&q,q&q,q & q,qnq,qnq,q n q
+raindrops,raindrops,raindrop,rain drop,raindrops,rain drops
+ray-ban,ray-ban,rayban,ray ban,raybans,rybans
+red flame,red flame,redflame,red flame,red flam
+red tape,red tape,redtape,red tape,redtap,redtap
+chief,red chief,red chef
+reebok,reebok,reebok,reebok,reebk,ribok
+rodenstock,rodenstock,rodnstock,rodenstock,roden stock
+rsvp cross,rsvp cross,rsvpcross,rsv cross,rspv,rsvo,rsvp
+studio, salwar studio,salwar studio,salwarstudio,salwarstudio,salwar stuido
+san frissco,san frissco,sanfrisco,sanfrissco,sanfrissco
+scharf,scharf,scraf,scarf,scharf
+shree,shree,shri,shreee,sree,shre,shree
+sia,sia,sia,seea,sie,sea,sea
+skechers,skechers,skchers,skechers,sckerhrs,skecher,skechers
+skybags,skybags,skybag,sky bags,sky bag,sky bags
+soch,soch,soch,sooch,soch
+soie,soie,soi,soei,soie,soei,soiee
+solethreads,solethreads,sole thread,sole threads,solethread,sole threads chappal
+speedo,speedo,speedo,speedo,speedo,spido
+steve madden,steve madden,steve madden,steve madden,stevemadn,stivemadden
+stylista,stylista,stylist,styleesta,stylista
+sundrive,sundrive,sundrive,sun drive,sun drive,sundrive,sun driv
+superdry,superdry,super dry,suprdry,superdry
+talinum,talinum,talinum,taleenum
+tantra,tantra,tantar,tantra,tantra
+the bro code,the bro code,thebrocode,the bro code,bro code,bro cde
+company,the cotton company,the cotton company,thecotoncompany,thecoottoncompany,thecottoncompany,cottoncompany
+the gud look,the gud look,thegoodluk,the good loook,gudlook,gud look,good luck,gud luk,
+the stiff collar,the stiff collar,stiffcolar,stiff collar,the stiff collar,the stiff colar,stiff coler
+the tie hub,the tie hub,tiehub,tie hub,the tie hub,tie
+toniq,toniq,tonic,toniq
+torero,torero,torer,tiredo,toredo,torero
+trend arrest,trend arrest,trendarrest,tredn arest,trendarest
+trend divva,trend divva,trenddiva,trend diva,trend divva
+triveni,triveni,triveni,treevni,tree vini,treeveni
+turtle,turtle,turtlr,turtle,turtel
+tycoon,tycoon,tycon,tycooon,tycoon,tycun
+v.,v.,v.,v dot,vdot
+versace,versace,versace,versac,ver sace
+viva n diva,viva n diva,vivadiva,viva and diva,viva & diva
+vivinkaa,vivinkaa,vivinka,vivinkaa,vivika,vivin
+vogue,vogue,vogue,vog,vogu
+w,w,w,w kurtas
+wildcraft,wildcraft,wildcraf,weildcraft,wildcrafy
+woodland,woodland,wudland,woodland,wood land,wood land
+wrangler,wrangler,wrangler,wrangeler,wrangler,wranglre
+yell,yell,yell,yull
+yepme,yepme,yepme,yep m e,yep me
+zebru,zebru,zebru,zebra,ze bru
+ziyaa,ziyaa,ziya,ziyaa
+purse,women bag,men wallet

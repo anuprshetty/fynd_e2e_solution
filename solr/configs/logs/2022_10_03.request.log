@@ -1,0 +1,17 @@
+172.28.0.1 - - [03/Oct/2022:12:15:21 +0000] "GET /solr/admin/info/system?_=1664798595457&wt=json HTTP/1.1" 200 1316
+172.28.0.1 - - [03/Oct/2022:12:15:21 +0000] "GET /solr/admin/cores?_=1664798595457&indexInfo=false&wt=json HTTP/1.1" 200 391
+172.28.0.1 - - [03/Oct/2022:12:15:21 +0000] "GET /solr/admin/info/system?_=1664798595457&wt=json HTTP/1.1" 200 1316
+172.28.0.1 - - [03/Oct/2022:12:15:23 +0000] "GET /solr/ HTTP/1.1" 200 3244
+172.28.0.1 - - [03/Oct/2022:12:15:23 +0000] "GET /solr/admin/cores?_=1664799323189&indexInfo=false&wt=json HTTP/1.1" 200 391
+172.28.0.1 - - [03/Oct/2022:12:15:23 +0000] "GET /solr/admin/info/system?_=1664799323190&wt=json HTTP/1.1" 200 1324
+172.28.0.1 - - [03/Oct/2022:12:15:23 +0000] "GET /solr/admin/info/system?_=1664799323190&wt=json HTTP/1.1" 200 1316
+172.28.0.1 - - [03/Oct/2022:12:15:26 +0000] "GET /solr/admin/cores?_=1664799323189&indexInfo=false&wt=json HTTP/1.1" 200 391
+172.28.0.1 - - [03/Oct/2022:12:15:26 +0000] "GET /solr/admin/info/system?_=1664799323190&wt=json HTTP/1.1" 200 1320
+172.28.0.1 - - [03/Oct/2022:12:15:26 +0000] "GET /solr/admin/cores?_=1664799323189&wt=json HTTP/1.1" 200 971
+172.28.0.1 - - [03/Oct/2022:12:15:26 +0000] "GET /solr/admin/cores?_=1664799323189&indexInfo=false&wt=json HTTP/1.1" 200 391
+172.28.0.1 - - [03/Oct/2022:12:15:26 +0000] "GET /solr/admin/cores?_=1664799323189&wt=json HTTP/1.1" 200 970
+172.28.0.1 - - [03/Oct/2022:12:15:26 +0000] "GET /solr/admin/info/system?_=1664799323190&wt=json HTTP/1.1" 200 1315
+172.28.0.1 - - [03/Oct/2022:12:15:55 +0000] "GET /solr/admin/cores?_=1664799323189&action=CREATE&config=solrconfig.xml&dataDir=data&instanceDir=products&name=products&schema=schema.xml&wt=json HTTP/1.1" 400 417
+172.28.0.1 - - [03/Oct/2022:12:16:10 +0000] "GET /solr/admin/cores?_=1664799323189&action=CREATE&config=solrconfig.xml&dataDir=products&instanceDir=products&name=products&schema=schema.xml&wt=json HTTP/1.1" 400 417
+172.28.0.1 - - [03/Oct/2022:12:16:27 +0000] "GET /solr/admin/cores?_=1664799323189&action=CREATE&config=solrconfig.xml&dataDir=data&instanceDir=products&name=products&schema=schema.xml&wt=json HTTP/1.1" 400 417
+172.28.0.1 - - [03/Oct/2022:12:16:38 +0000] "GET /solr/admin/cores?_=1664799323189&action=CREATE&config=solrconfig.xml&dataDir=data&instanceDir=products&name=products&schema=schema.xml&wt=json HTTP/1.1" 400 417

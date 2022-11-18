@@ -1,0 +1,1 @@
+SOLR_PRODUCT_DIRECTORY_PATH = str(__file__)[:-12]

@@ -1,0 +1,1 @@
+SOLR_AUTOCOMPLETE_DIRECTORY_PATH = str(__file__)[:-12]
